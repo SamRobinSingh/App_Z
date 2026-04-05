@@ -59,3 +59,100 @@ $$TTC = \frac{d}{v_{rel}} < \tau_{safety}$$
 ```bash
 git clone [https://github.com/yourusername/Z3GION.git](https://github.com/yourusername/Z3GION.git)
 cd Z3GION
+# 🚀 Z3GION Project Setup Guide
+
+## 🔧 Backend Setup (Flask)
+
+```bash
+cd backend
+python -m venv venv
+
+# Activate virtual environment
+# On Linux / Mac:
+source venv/bin/activate
+
+# On Windows:
+venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file inside the `backend` directory and add the following:
+
+```env
+GEMINI_API_KEY=your_gemini_api_key_here
+MAPS_API_KEY=your_google_maps_api_key_here
+FLASK_ENV=development
+```
+
+---
+
+## ▶️ Start the Server
+
+```bash
+flask run --host=0.0.0.0 --port=5000
+```
+
+---
+
+## 📱 Frontend Setup (Android)
+
+1. Open the `frontend` folder in **Android Studio**
+2. Sync the Gradle project
+3. Navigate to `strings.xml` (or your config file)
+4. Update the **base URL** to your Flask server:
+
+```
+http://<your-ip-address>:5000
+```
+
+5. Build and run the app on a **physical Android device**  
+   *(Camera and hardware sensors are required)*
+
+---
+
+## 📲 Usage
+
+### 🚀 Launch the App
+Open **Z3GION** on your mobile device.
+
+### 🎤 Voice Activation
+- Tap the screen  
+**or**
+- Say the wake word
+
+### ❓ Ask Questions
+Examples:
+- *"Z3GION, what is written on the sign in front of me?"*
+- *"Navigate me to the nearest bus stop."*
+
+### 📡 Offline Mode
+- Automatically activates when there is no internet connection  
+- Uses **TensorFlow model** for:
+  - Basic object detection  
+  - Safety alerts  
+
+---
+
+## 🔮 Roadmap / What's Next
+
+### 🌆 Smart City Integration
+- Connect Z3GION with third-party city transit agents  
+- Enable real-time autonomous transport booking *(Fetch.ai ecosystem)*
+
+### 👓 Hardware Wearable
+- Transition from mobile camera to **smart glasses**
+- Enable fully hands-free scanning
+
+### ⚡ Enhanced Local Processing
+- Optimize PyTorch mobile models
+- Reduce battery consumption
+- Improve performance on-device
+
+---
+
